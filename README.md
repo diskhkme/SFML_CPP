@@ -1,6 +1,9 @@
 # SFML_CPP
 
-## 문제 : 키보드 입력으로 움직이기
+## 문제 : 배열과 반복문으로 여러 개 그리기
 * 코드를 다운로드 받고 SFML_CPP.sln 파일을 비주얼 스튜디오를 사용해 여세요.
 * main.cpp의 문제 설명의 조건에 맞게 프로그램을 구현해 보세요.
-> 문제 : myWindow.IsKeyPressed() 함수를 사용하여 원을 좌우상하로 움직이도록 구현해보세요. myWindow.IsKeyPressed() 함수의 인자로 "Left","Right","Up","Down"등을 넣으면 해당 화살표키가 눌렸는지 확인하여 눌린 상태라면 true를, 아니라면 false를 반환합니다.
+> 문제 : 세 개의 원을 동시에 표시하고 움직이고 싶습니다. 이를 위해 각 원의 x위치, y위치를 저장하는 배열을 만들고, for문을 사용해 배열의 길이만큼의 원을 그려 보세요. 추가적으로 ColorNames 배열을 만들면 각 원의 색깔도 다르게 그릴 수 있습니다! 또한 키보드 입력을 통해 세 원을 동시에 움직이려 할 때, 최대한 효율적으로 구현하는 방법을 생각해 보세요.
+
+* 결과 예시
+<img src="/images/Problem_Array_and_Loop.JPG" width="600px" height="600px" title="Array Loop"></img><br/>
