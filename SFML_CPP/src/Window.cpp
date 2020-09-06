@@ -48,3 +48,15 @@ void Window::Show()
 	m_Window.display();
 }
 
+bool Window::IsKeyPressed(const std::string& direction)
+{
+	if(direction == "Left")
+		return sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left);
+	else if (direction == "Right")
+		return sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right);
+	else if (direction == "Up")
+		return sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up);
+	else if (direction == "Down")
+		return sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down);
+}
+

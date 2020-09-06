@@ -13,6 +13,9 @@ public:
 	void Clear();
 	void DrawCircle(float radius, float xpos, float ypos, ColorNames colorName);
 	void Show();
+public:
+	//Event check
+	bool IsKeyPressed(const std::string& direction);
 private:
 	sf::RenderWindow m_Window;
 	bool m_IsRunning;
