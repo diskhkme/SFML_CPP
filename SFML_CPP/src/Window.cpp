@@ -1,0 +1,50 @@
+#include "Window.h"
+
+Window::Window(const std::string& title, int width, int height)
+{
+	m_Window.create( sf::VideoMode{ 600, 600 }, "SFML Test!" );
+	m_IsRunning = true;
+	m_Window.setFramerateLimit(60);
+}
+
+Window::~Window()
+{
+}
+
+bool Window::CheckClosed()
+{
+	sf::Event event;
+
+	while (m_Window.pollEvent(event))
+	{
+		switch (event.type)
+		{
+		case sf::Event::Closed:
+			m_IsRunning = false;
+			m_Window.close();
+			return true;
+			break;
+		}
+	}
+	return false;
+}
+
+void Window::Clear()
+{
+	m_Window.clear();
+}
+
+void Window::DrawCircle(float radius, float xpos, float ypos, ColorNames colorName)
+{
+	sf::CircleShape shape(radius);
+	shape.setFillColor(ColorTable::GetColor(colorName));
+	shape.setPosition(xpos, ypos);
+
+	m_Window.draw(shape);
+}
+
+void Window::Show()
+{
+	m_Window.display();
+}
+
